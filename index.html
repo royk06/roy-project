@@ -37,7 +37,7 @@
           <a href="/">Javascript Flash Course</a>
         </div>
 
-        <button id="open-nav-menu">
+        <button id="open-nav-menu" onclick="dropMenu()">
           <svg
             width="24"
             height="24"
@@ -132,7 +132,7 @@
     <main>
       <section id="home" class="container greeting-section">
         <div class="left-side">
-          <h1 id="greeting">Good Afternoon!</h1>
+          <h1 id="greeting">Good Morning!!!</h1>
           <p id="weather">Retrieving weather information...</p>
           <div class="weather-group">
             <input
@@ -169,39 +169,40 @@
       </section>
 
       <section id="gallery" class="gallery-section">
-        <img src="" alt="" />
-
+        <img src="assets/gallery/img1.png" alt=""  id="galleryImage"/>
         <div class="thumbnails">
-          
-        </div>
-      </section>
-
-      <section id="products" class="container products-section">
-        <div class="products-filter">
-          <input type="radio" checked="true" id="all" name="products" />
-          <label for="all">
-            All
-            <span class="product-amount">3</span>
-          </label>
-          <input type="radio" id="paid" name="products" />
-          <label for="paid">
-            Paid
-            <span class="product-amount">2</span>
-          </label>
-          <input type="radio" id="free" name="products" />
-          <label for="free">
-            Free
-            <span class="product-amount">1</span>
-          </label>
-
-          <span class="glider"></span>
-        </div>
-
-        <div class="products-area">
-          
-       </div>
+          <button class="button1" onclick="changeImage1()"></button>
+          <button class="button2" onclick="changeImage2()"></button>
+          <button class="button3" onclick="changeImage3()"></button>
+        </div>
 
       </section>
+      <!-- products -->
+    <section id="products" class="container products-section">
+      <div class="products-filter">
+        <input type="radio" checked="true" id="all" name="products" onclick="displayItems('all');" />
+        <label for="all">
+          All
+          <span class="qtyAll"></span>
+        </label>
+        <input type="radio" id="paid" name="products" onclick="displayItems('paid');" />
+        <label for="paid">
+          Paid
+          <span class="qtyPaid"></span>
+        </label>
+        <input type="radio" id="free" name="products"onclick="displayItems('free');" />
+        <label for="free">
+          Free
+          <span class="qtyFree"></span>
+        </label>
+
+        <span class="glider"></span>
+      </div>
+
+      <!-- Container for displaying cards -->
+      <div class="content-container" id="cardContainer"></div>
+    </section>
+
 
       <section id="faqs" class="container faqs-section">
         <h3>Frequently Asked Questions</h3>
